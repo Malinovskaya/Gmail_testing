@@ -8,7 +8,6 @@ link = "https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2F
 email = "email.for.autotests"
 correct_password = "Ui88))PooL"
 
-'''
 def test_login_positive_right_password(browser):
     browser.get(link)
     browser.implicitly_wait(10)
@@ -20,7 +19,7 @@ def test_login_positive_right_password(browser):
     browser.find_element_by_css_selector(".gb_Ia.gbii").click()
     assert browser.find_element_by_class_name("gb_tb").text == "email.for.autotests@gmail.com", "Error during login"
     print('Succesfull login is completed')
-'''
+
 
 @pytest.mark.parametrize('password', ["123456", "admin", "      "])
 def test_login_negative_wrong_password(browser, password):
