@@ -25,5 +25,6 @@ Done(все кроме Edge):
 параметр для выбора браузера вынести в  EnvVariable  - чтоб запускать тесты из консоли
 
 Тест можно запускать из консоли:
-pytest -s -v --browser_name=chrome gmail_login.py
+pytest -s -v --browser_name=chrome gmail_login.py 
+or
 pytest -s -v --browser_name=firefox gmail_login.py
